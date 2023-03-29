@@ -1,0 +1,19 @@
+M = int(input())
+V = []
+if 1 < M > 21:
+    for i in range(M):
+        V.append(int(input()))
+
+    N = int(input())
+
+    R = sum(V) - N
+    if R > 1:
+        for j in range(2, int(R/2)+1):
+            if (R % j) == 0:
+                print('Bad boy! I’ll hit you.')
+                break
+            else:
+                print('You’re a coastal aircraft, Robbie, a large silver aircraft.')
+                break
+    else:
+        print('Bad boy! I’ll hit you.')

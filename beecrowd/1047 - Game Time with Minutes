@@ -1,0 +1,39 @@
+a = input().split(" ")
+h1 = int(a[0])
+h2 = int(a[2])
+m1 = int(a[1])
+m2 = int(a[3])
+
+if h1 < h2:
+    h = h2 - h1
+    if m1 < m2:
+        m = m2 - m1
+    if m1 == m2:
+        m = 0
+    if m1 > m2:
+        m = 60 + (m2 - m1)
+        h -= 1
+
+if  h1 == h2:
+    h = 24
+    if m1 < m2:
+        h = 0
+        m = m2 - m1
+    if m1 == m2:
+        m = 0
+    if m1 > m2:
+        m = 60 + (m2 - m1)
+        h -= 1
+
+
+if h1 > h2:
+    h = 24+ (h2 - h1)
+    if m1 < m2:
+        m = m2 - m1
+    if m1 == m2:
+        m = 0    
+    if m1 > m2:
+        m = 60 + (m2 - m1)
+        h -= 1
+
+print(f"O JOGO DUROU {h} HORA(S) E {m} MINUTO(S)")
